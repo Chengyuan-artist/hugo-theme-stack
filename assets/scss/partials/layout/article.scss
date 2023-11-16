@@ -210,7 +210,7 @@
     line-height: var(--article-line-height);
 
     & > p {
-        margin: 1.5em 0;
+        margin: 1.0em 0;
     }
 
     h1,
@@ -221,7 +221,7 @@
     h6 {
         margin-inline-start: calc((var(--card-padding)) * -1);
         padding-inline-start: calc(var(--card-padding) - var(--heading-border-size));
-        border-inline-start: var(--heading-border-size) solid var(--accent-color);
+        // border-inline-start: var(--heading-border-size) solid var(--accent-color);
     }
 
     figure {
@@ -235,10 +235,11 @@
 
     blockquote {
         position: relative;
-        margin: 1.5em 0;
+        margin: 1.0em 0;
         border-inline-start: var(--blockquote-border-size) solid var(--card-separator-color);
-        padding: 15px calc(var(--card-padding) - var(--blockquote-border-size));
-        background-color: var(--blockquote-background-color);
+        padding: 0px calc(var(--card-padding) - var(--blockquote-border-size));
+        // background-color: var(--blockquote-background-color);
+        color: var(--card-text-color-secondary);
 
         .cite {
             display: block;
@@ -252,12 +253,12 @@
     }
 
     hr {
-        width: 100px;
-        margin: 40px auto;
+        width: auto;
+        margin: auto;
         background: var(--card-text-color-tertiary);
-        height: 2px;
+        height: 1.55px;
         border: 0;
-        opacity: 0.55;
+        opacity: 0.2;
     }
 
     code {
@@ -417,9 +418,9 @@
     .video-wrapper,
     .table-wrapper,
     .s_video_simple {
-        margin-left: calc((var(--card-padding)) * -1);
+        margin-left: calc((var(--card-padding)) * -0.2);
         margin-right: calc((var(--card-padding)) * -1);
-        width: calc(100% + var(--card-padding) * 2);
+        width: calc(100% + var(--card-padding) * 1);
     }
 
     /// Make long KaTeX equations scrollable in the x-axis
