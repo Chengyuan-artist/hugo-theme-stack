@@ -6,7 +6,7 @@
 
     article {
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
         background-color: var(--card-background);
         box-shadow: var(--shadow-l1);
         border-radius: var(--card-border-radius);
@@ -61,7 +61,7 @@
     font-size: 2.2rem;
 
     @include respond(xl) {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
     }
 
     a {
@@ -275,3 +275,55 @@
         }
     }
 }
+
+$single-column-max-width: 1024px;
+$front-container-background: #ffffff;
+
+.has-image-post {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+    @media screen and (max-width: $single-column-max-width) {
+      flex-direction: column-reverse;
+      margin: 0 0 15px 0;
+      padding: 0;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      background: $front-container-background;
+    }
+  
+    .post-item-info-wrapper {
+      flex-grow: 1;
+  
+      @media screen and (max-width: $single-column-max-width) {
+        width: 100%;
+        // padding: 15px 20px;
+      }
+    }
+  
+    .post-item-image-wrapper {
+      margin-left: 40px;
+      margin-right: 40px;
+  
+      @media screen and (max-width: $single-column-max-width) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+  
+      .post-item-image {
+        width: 230px;
+        height: 120px;
+        background: no-repeat center;
+        background-size: cover;
+        border-radius: 5px;
+        overflow: hidden;
+  
+        @media screen and (max-width: $single-column-max-width) {
+          width: 100%;
+          height: 180px;
+          border-radius: 0;
+        }
+      }
+    }
+  }

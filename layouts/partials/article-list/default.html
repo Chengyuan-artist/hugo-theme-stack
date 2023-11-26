@@ -1,4 +1,13 @@
 {{ $image := partialCached "helper/image" (dict "Context" . "Type" "articleList") .RelPermalink "articleList" }}
-<article class="{{ if $image.exists }}has-image{{ end }}">
-    {{ partialCached "article/components/details" . .RelPermalink }}
+<article class="{{ if $image.exists }}has-image-post{{ end }}">
+    <div class="post-item-info-wrapper">
+        {{ partialCached "article/components/details" . .RelPermalink }}
+    </div>
+
+    {{ if $image.exists }}
+    <div class="post-item-image-wrapper">
+        <div class="post-item-image" {{ $thumbnail :=$image.resource.Resize "690x360" }}
+            style="background-image: url('{{ $image.permalink }}')"></div>
+    </div>
+    {{ end }}
 </article>
