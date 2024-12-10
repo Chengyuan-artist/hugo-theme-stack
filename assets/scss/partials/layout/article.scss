@@ -250,6 +250,92 @@
                 text-decoration: underline;
             }
         }
+
+        .link {
+            color: var(--card-text-color-secondary);
+        }
+
+        code {
+            color: var(--card-text-color-secondary);
+        }
+
+        .highlight {
+            $text-color: var(--card-text-color-secondary);
+
+            .chroma .line {
+                color: $text-color;
+            }
+
+            .chroma .n {
+                color: $text-color;
+            }
+
+            /* NameBuiltin */
+            .chroma .nb {
+                color: $text-color;
+            }
+
+            /* NameBuiltinPseudo */
+            .chroma .bp {
+                color: $text-color;
+            }
+
+            /* NameEntity */
+            .chroma .ni {
+                color: $text-color;
+            }
+
+
+            /* NameFunctionMagic */
+            .chroma .fm {
+                color: $text-color;
+            }
+
+            /* NameLabel */
+            .chroma .nl {
+                color: $text-color;
+            }
+
+            /* NameNamespace */
+            .chroma .nn {
+                color: $text-color;
+            }
+
+            /* NameProperty */
+            .chroma .py {
+                color: $text-color;
+            }
+
+            /* NameVariable */
+            .chroma .nv {
+                color: $text-color;
+            }
+
+            /* NameVariableClass */
+            .chroma .vc {
+                color: $text-color;
+            }
+
+            /* NameVariableGlobal */
+            .chroma .vg {
+                color: $text-color;
+            }
+
+            /* NameVariableInstance */
+            .chroma .vi {
+                color: $text-color;
+            }
+
+            /* NameVariableMagic */
+            .chroma .vm {
+                color: $text-color;
+            }
+        }
+
+        pre code {
+            color: var(--card-text-color-secondary)
+        }
+
     }
 
     hr {
